@@ -4,7 +4,7 @@
 
 */
 require_once 'connection.php';
-
+ob_start();
 
 function contact_form_plugin()
 {

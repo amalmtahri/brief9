@@ -75,7 +75,9 @@ if(isset($_GET['id']) && !empty($_GET['id']))
     $query = "DELETE FROM `contactus` WHERE id=".$_GET['id'];
     mysqli_query($connection, $query);
     global $wp;
-    $urlv=add_query_arg( $wp->query_vars, home_url() );
+    // $urlv=add_query_arg( $wp->query_vars, home_url() );
+    $urlp= admin_url('admin.php?page=contact-dashbord');
+   wp_redirect($urlp);
       
 }
 
